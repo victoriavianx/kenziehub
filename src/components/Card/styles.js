@@ -26,23 +26,23 @@ export const CardLi = styled.li`
   :hover {
     background-color: var(--gray);
   }
-`;
 
-export const ContentButtons = styled.div`
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  margin-right: 1rem;
+  div {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-right: 1rem;
 
-  button {
-    width: 25px;
-    height: 25px;
-    background-color: transparent;
-    border: 0;
-    margin-left: 1rem;
+    button {
+      width: 25px;
+      height: 25px;
+      background-color: transparent;
+      border: 0;
+      margin-left: 1rem;
 
-    .icon {
-      color: #fff;
+      .icon {
+        color: #fff;
+      }
     }
   }
 `;

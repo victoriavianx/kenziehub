@@ -1,4 +1,4 @@
-import { CardLi, ContentButtons } from "./styles";
+import { CardLi } from "./styles";
 import { FiTrash, FiEdit } from "react-icons/fi";
 import api from "../../services/api";
 import { toast } from "react-toastify";
@@ -28,14 +28,14 @@ function Card({ tech, handleEditTech, showTechs }) {
     <CardLi>
       <h3>{tech.title}</h3>
       <p>{tech.status}</p>
-      <ContentButtons>
+      <div>
         <button onClick={handleModal}>
           <FiEdit className="icon" />
         </button>
         <button onClick={handleClick}>
           <FiTrash className="icon" />
         </button>
-      </ContentButtons>
+      </div>
     </CardLi>
   );
 }

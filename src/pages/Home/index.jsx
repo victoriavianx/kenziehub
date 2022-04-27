@@ -1,6 +1,6 @@
 import { useHistory } from "react-router-dom";
 import { Container, Content } from "./styles";
-import KenzieHub from "../../assets/kenzie-hub-logo.svg";
+import KenzieHub from "../../assets/img/kenzie-hub-logo.svg";
 import Button from "../../components/Button";
 import { Redirect } from "react-router-dom";
 

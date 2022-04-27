@@ -5,7 +5,7 @@ import * as yup from "yup";
 import { Container, Content } from "./styles";
 import Input from "../../components/Input";
 import Button from "../../components/Button";
-import KenzieHub from "../../assets/kenzie-hub-logo.svg";
+import KenzieHub from "../../assets/img/kenzie-hub-logo.svg";
 import api from "../../services/api";
 import { toast } from "react-toastify";
 import { Redirect } from "react-router-dom";
