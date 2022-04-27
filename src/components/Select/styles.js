@@ -8,18 +8,22 @@ export const Container = styled.div`
   }
 `;
 
-export const InputContainer = styled.input`
+export const SelectContainer = styled.select`
   background: var(--gray);
   border-radius: 4px;
   border: 2px solid var(--gray);
-  color: var(--white);
-  font-size: 14px;
+  color: var(--lightgray);
+  font-size: 12px;
   margin-bottom: 1rem;
   padding: 1rem;
   width: 100%;
   height: 45px;
   display: flex;
   transition: 0.4s;
+
+  option {
+    font-size: 14px;
+  }
 
   ::placeholder {
     color: var(--lightgray);

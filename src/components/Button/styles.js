@@ -5,7 +5,7 @@ export const Container = styled.button`
   color: var(--white);
   height: 45px;
   border: solid 1px ${(props) => (props.grayButton ? "#868E96" : "#FF577F")};
-  border-radius: 8px;
+  border-radius: 4px;
   margin-top: 16px;
   width: 100%;
   :hover {

@@ -1,0 +1,21 @@
+#buttonClose {
+  background-color: transparent;
+  border: 0;
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--lightgray);
+  margin-left: 5rem;
+}
+
+#buttonSignup {
+  width: 100%;
+  background-color: var(--pink);
+  height: 45px;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 1rem;
+}
+
+#buttonSignup:hover {
+  background-color: #59323f;
+}

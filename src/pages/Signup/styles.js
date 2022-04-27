@@ -8,37 +8,34 @@ export const Container = styled.div`
   align-items: center;
 `;
 
-export const Header = styled.header`
-  width: 100vw;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-`;
-
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50vw;
-
+  width: 40vw;
   background-color: var(--darkgray);
+  border-radius: 4px;
+
+  h4 {
+    margin-top: 1rem;
+  }
+
+  span {
+    margin-top: 1rem;
+    font-size: 10px;
+    color: var(--lightgray);
+  }
 
   form {
-    margin: 2rem 0;
+    margin: 1rem 0 2rem 0;
   }
-`;
 
-export const Select = styled.select`
-  background: var(--gray);
-  border-radius: 4px;
-  border: 2px solid var(--gray);
-  color: var(--lightgray);
-  font-size: 16px;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  width: 100%;
-  height: 45px;
-  display: flex;
-  transition: 0.4s;
+  @media (max-width: 767px) {
+    width: 60vw;
+  }
+
+  @media (min-width: 1025px) {
+    width: 400px;
+  }
 `;

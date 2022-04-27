@@ -1,14 +1,17 @@
 import { useForm } from "react-hook-form";
-import { Container, Content, Header, Select } from "./styles";
-import KenzieHub from "../../assets/kenzie-hub-logo.svg";
+import { Container, Content } from "./styles";
+import Header from "../../components/Header";
 import Input from "../../components/Input";
 import Button from "../../components/Button";
+import Select from "../../components/Select";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import axios from "axios";
 import api from "../../services/api";
+import { useHistory } from "react-router-dom";
+import { toast } from "react-toastify";
+import { Redirect } from "react-router-dom";
 
-function Signup() {
+function Signup({ authenticated }) {
   const schema = yup.object().shape({
     name: yup.string().required("Campo obrigatório"),
     email: yup
@@ -24,7 +27,14 @@ function Signup() {
       .oneOf([yup.ref("password")], "Senhas não combinam")
       .required("Campo obrigatório"),
     course_module: yup.string().required("Campo obrigatório"),
+    bio: yup
+      .string()
+      .max(50, "Máximo de 50 caracteres")
+      .required("Campo obrigatório"),
+    contact: yup.string().required("Campo obrigatório"),
   });
+
+  const history = useHistory();
 
   const {
     register,
@@ -32,17 +42,27 @@ function Signup() {
     formState: { errors },
   } = useForm({ resolver: yupResolver(schema) });
 
-  const onSubmit = ({ name, email, password, course_module }) => {
-    const user = { name, email, password, course_module };
-    api.post("/users", user);
+  const onSubmit = ({ name, email, password, course_module, bio, contact }) => {
+    const user = { name, email, password, course_module, bio, contact };
+    console.log(user);
+    api
+      .post("/users", user)
+      .then((_) => {
+        toast.success("Conta criada com sucesso!");
+        return history.push("/login");
+      })
+      .catch((err) => {
+        toast.error("Ops! Algo deu errado");
+      });
   };
+
+  if (authenticated) {
+    return <Redirect to="/dashboard" />;
+  }
 
   return (
     <Container>
-      <Header>
-        <img src={KenzieHub} alt="kenzie-hub-logo" />
-        <button>Voltar</button>
-      </Header>
+      <Header title={"Voltar"} path={"/"} />
       <Content>
         <h4>Crie sua conta</h4>
         <span>Rápido e grátis, vamos nessa</span>
@@ -77,15 +97,32 @@ function Signup() {
             type="password"
             error={errors.confirmPassword?.message}
           />
-          <div>
-            <label>Selecionar Módulo {errors.course_module?.message}</label>
-            <Select {...register("course_module")}>
-              <option value="Primeiro módulo">Primeiro módulo</option>
-              <option value="Segundo módulo">Segundo módulo</option>
-              <option value="Terceiro módulo">Terceiro módulo</option>
-              <option value="Quarto módulo">Quarto módulo</option>
-            </Select>
-          </div>
+          <Select
+            name="course_module"
+            label="Selecionar Módulo"
+            register={register}
+            options={[
+              "Primeiro módulo (Introdução ao Frontend)",
+              "Segundo módulo (Frontend Avançado)",
+              "Terceiro módulo (Introdução ao Backend)",
+              "Quarto módulo (Backend Avançado)",
+            ]}
+            error={errors.course_module?.message}
+          />
+          <Input
+            name="bio"
+            label="Bio"
+            placeholder="Um pouco sobre você"
+            register={register}
+            error={errors.bio?.message}
+          />
+          <Input
+            name="contact"
+            label="Contato"
+            placeholder="Digite aqui seu contato"
+            register={register}
+            error={errors.contact?.message}
+          />
           <Button type="submit">Cadastrar</Button>
         </form>
       </Content>
