@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { Container, Content } from "./styles";
+import { Container, Content, NewInput } from "./styles";
 import Header from "../../components/Header";
 import Input from "../../components/Input";
 import Button from "../../components/Button";

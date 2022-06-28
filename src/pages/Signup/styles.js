@@ -10,6 +10,7 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
+  margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,7 +18,7 @@ export const Content = styled.div`
   width: 70vw;
   background-color: var(--darkgray);
   border-radius: 4px;
-  max-width: 400px;
+  max-width: 350px;
 
   h4 {
     margin-top: 1rem;
@@ -30,6 +31,7 @@ export const Content = styled.div`
   }
 
   form {
+    max-width: 300px;
     margin: 1rem 0 2rem 0;
   }
 

@@ -7,6 +7,7 @@ export const Container = styled.div`
   max-width: 300px;
   div {
     font-size: 12px;
+    margin-left: 1rem;
     margin-bottom: 0.5rem;
   }
 `;
@@ -23,7 +24,8 @@ export const InputContainer = styled.input`
   height: 45px;
   display: flex;
   transition: 0.4s;
-  max-width: 265px;
+  max-width: 260px;
+  margin-left: 1rem;
 
   ::placeholder {
     color: var(--lightgray);
