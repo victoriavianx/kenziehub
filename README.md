@@ -2,6 +2,8 @@
 
 Kenziehub é um projeto para anotar as tecnologias que o usuário está aprendendo, podendo atualizar o status do aprendizado ou excluir a tecnologia.
 
+*-> [Clique aqui para acessar o app](https://kenzie-hub.netlify.app/)*
+
 ## 💻 Desenvolvimento
 
 Este foi o meu segundo desafio pois da base do React fui para algo mais elaborado. Nesse projeto foi trabalhado validações de formulário e requisições de API com método GET, POST, PUT e DELETE, além de pensar na experiência do usuário com avisos de sucesso e/ou falha em cada parte necessária da aplicação. As validações foram feitas com React Hook Form + Yup e as requisições com Axios, para os pop-ups foi utilizada a lib React Toastify.
