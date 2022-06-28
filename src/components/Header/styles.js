@@ -5,7 +5,7 @@ export const HeaderContent = styled.header`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  max-width: 768px;
+  max-width: 1024px;
 
   button {
     width: 70px;

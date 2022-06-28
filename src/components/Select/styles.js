@@ -23,6 +23,7 @@ export const SelectContainer = styled.select`
   height: 45px;
   display: flex;
   transition: 0.4s;
+  max-width: 265px;
 
   option {
     font-size: 14px;

@@ -11,10 +11,11 @@
 }
 
 .Container {
-  width: 40%;
-  height: 40%;
+  width: 80%;
+  height: 30%;
   background-color: var(--darkgray);
   border-radius: 4px;
+  max-width: 330px;
 }
 
 .Container form {
@@ -50,13 +51,6 @@
 
 .topContainer h4 {
   font-size: 0.8rem;
-}
-
-@media (max-width: 678px) {
-  .Container {
-    width: 50%;
-    height: 50%;
-  }
 }
 
 @media (min-width: 992px) {

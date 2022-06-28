@@ -23,6 +23,7 @@ export const InputContainer = styled.input`
   height: 45px;
   display: flex;
   transition: 0.4s;
+  max-width: 265px;
 
   ::placeholder {
     color: var(--lightgray);

@@ -13,23 +13,15 @@ export const ModalContainer = styled.section`
 `;
 
 export const Container = styled.div`
-  width: 40%;
+  width: 80%;
   height: 40%;
   background-color: var(--darkgray);
   border-radius: 4px;
+  max-width: 330px;
 
   form {
     padding: 2rem;
-  }
-
-  @media (max-width: 678px) {
-    width: 50%;
-    height: 50%;
-  }
-
-  @media (min-width: 992px) {
-    width: 369px;
-    height: 369px;
+    max-width: 330px;
   }
 `;
 
@@ -44,6 +36,7 @@ export const TopContainer = styled.div`
   position: relative;
 
   h4 {
+    margin-left: 1rem;
     font-size: 0.8rem;
   }
 `;
