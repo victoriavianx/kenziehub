@@ -7,17 +7,18 @@ export const CardLi = styled.li`
   align-items: center;
   height: 50px;
   border-radius: 4px;
-  width: 50vw;
+  width: 70vw;
   margin: 1rem 0 1rem 0;
+  max-width: 708px;
 
   h3 {
-    font-size: 14px;
+    font-size: 0.7rem;
     text-align: center;
     margin-left: 1rem;
   }
 
   p {
-    font-size: 12px;
+    font-size: 0.5rem;
     color: var(--lightgray);
     text-align: center;
     margin-left: 1rem;
@@ -43,6 +44,16 @@ export const CardLi = styled.li`
       .icon {
         color: #fff;
       }
+    }
+  }
+
+  @media (min-width: 425px) {
+    h3 {
+      font-size: 16px;
+    }
+
+    p {
+      font-size: 12px;
     }
   }
 `;

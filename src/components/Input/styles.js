@@ -1,10 +1,13 @@
 import styled, { css } from "styled-components";
 
 export const Container = styled.div`
+  width: 60vw;
+  margin: auto;
   text-align: left;
+  max-width: 300px;
   div {
     font-size: 12px;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
 `;
 
@@ -15,7 +18,7 @@ export const InputContainer = styled.input`
   color: var(--white);
   font-size: 14px;
   margin-bottom: 1rem;
-  padding: 1rem;
+  padding-left: 0.5rem;
   width: 100%;
   height: 45px;
   display: flex;

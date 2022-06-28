@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -13,9 +14,10 @@ export const Content = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 40vw;
+  width: 70vw;
   background-color: var(--darkgray);
   border-radius: 4px;
+  max-width: 400px;
 
   h4 {
     margin-top: 1rem;
@@ -24,15 +26,11 @@ export const Content = styled.div`
   span {
     margin-top: 1rem;
     font-size: 10px;
-    color: var(--lightgray);
+    color: var(--red);
   }
 
   form {
     margin: 1rem 0 2rem 0;
-  }
-
-  @media (max-width: 767px) {
-    width: 60vw;
   }
 
   @media (min-width: 1025px) {

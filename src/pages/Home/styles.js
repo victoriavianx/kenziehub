@@ -9,7 +9,8 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-  width: 400px;
+  width: 90%;
+  max-width: 400px;
 
   div {
     flex: 1;
@@ -17,7 +18,7 @@ export const Content = styled.div`
     margin-top: 1rem;
 
     button + button {
-      margin-left: 2rem;
+      margin-left: 1rem;
     }
   }
 `;

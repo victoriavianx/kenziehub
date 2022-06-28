@@ -17,10 +17,11 @@ export const Content = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 40vw;
+  width: 70vw;
   background-color: var(--darkgray);
   border-radius: 4px;
   padding-bottom: 2rem;
+  max-width: 400px;
 
   h4 {
     margin-top: 2.5rem;
@@ -36,12 +37,8 @@ export const Content = styled.div`
       margin-top: 0.3rem;
       margin-bottom: 1rem;
       font-size: 12px;
-      color: var(--lightgray);
+      color: var(--red);
     }
-  }
-
-  @media (max-width: 767px) {
-    width: 60vw;
   }
 
   @media (min-width: 1025px) {

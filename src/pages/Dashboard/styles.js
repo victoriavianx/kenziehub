@@ -53,18 +53,21 @@ export const TechTitle = styled.div`
 `;
 
 export const Content = styled.div`
-  width: 60vw;
+  width: 80vw;
   height: 60vh;
   display: flex;
   background-color: var(--darkgray);
   justify-content: center;
   border-radius: 4px;
   padding-top: 22px;
+  max-width: 768px;
 
-  div {
+  ul {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     width: 80%;
+    max-width: 738px;
   }
 `;
