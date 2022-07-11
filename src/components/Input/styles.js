@@ -7,8 +7,24 @@ export const Container = styled.div`
   max-width: 300px;
   div {
     font-size: 12px;
-    margin-left: 1rem;
     margin-bottom: 0.5rem;
+    span {
+      color: var(--red);
+    }
+  }
+
+  @media (min-width: 540px) {
+    div {
+      margin-left: 1.2rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    max-width: 240px;
+
+    div {
+      margin-left: 0;
+    }
   }
 `;
 
@@ -18,14 +34,13 @@ export const InputContainer = styled.input`
   border: 2px solid var(--gray);
   color: var(--white);
   font-size: 14px;
-  margin-bottom: 1rem;
+  margin: 0 auto 1rem auto;
   padding-left: 0.5rem;
   width: 100%;
   height: 45px;
   display: flex;
   transition: 0.4s;
   max-width: 260px;
-  margin-left: 1rem;
 
   ::placeholder {
     color: var(--lightgray);
@@ -36,4 +51,9 @@ export const InputContainer = styled.input`
     css`
       border-color: var(--red);
     `}
+
+  @media (min-width: 768px) {
+    max-width: 240px;
+    margin: 0 0 1rem 0;
+  }
 `;

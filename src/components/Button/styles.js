@@ -8,7 +8,13 @@ export const Container = styled.button`
   border-radius: 4px;
   margin-top: 16px;
   width: 100%;
+  transition: 0.5s;
+
   :hover {
     background-color: ${(props) => (props.grayButton ? "#343B41" : "#59323F")};
+  }
+
+  @media (min-width: 768px) {
+    margin-top: 1.45rem;
   }
 `;

@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { Container, Content, NewInput } from "./styles";
+import { ButtonDiv, Container, Content, Divisor, NewInput } from "./styles";
 import Header from "../../components/Header";
 import Input from "../../components/Input";
 import Button from "../../components/Button";
@@ -67,63 +67,69 @@ function Signup({ authenticated }) {
         <h4>Crie sua conta</h4>
         <span>Rápido e grátis, vamos nessa</span>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <Input
-            name="name"
-            label="Nome"
-            placeholder="Digite aqui seu nome"
-            register={register}
-            error={errors.name?.message}
-          />
-          <Input
-            name="email"
-            label="Email"
-            placeholder="Digite aqui seu email"
-            register={register}
-            error={errors.email?.message}
-          />
-          <Input
-            name="password"
-            label="Senha"
-            placeholder="Digite aqui sua senha"
-            register={register}
-            type="password"
-            error={errors.password?.message}
-          />
-          <Input
-            name="confirmPassword"
-            label="Confirmar Senha"
-            placeholder="Digite novamente sua senha"
-            register={register}
-            type="password"
-            error={errors.confirmPassword?.message}
-          />
-          <Select
-            name="course_module"
-            label="Selecionar Módulo"
-            register={register}
-            options={[
-              "Primeiro módulo (Introdução ao Frontend)",
-              "Segundo módulo (Frontend Avançado)",
-              "Terceiro módulo (Introdução ao Backend)",
-              "Quarto módulo (Backend Avançado)",
-            ]}
-            error={errors.course_module?.message}
-          />
-          <Input
-            name="bio"
-            label="Bio"
-            placeholder="Um pouco sobre você"
-            register={register}
-            error={errors.bio?.message}
-          />
-          <Input
-            name="contact"
-            label="Contato"
-            placeholder="Digite aqui seu contato"
-            register={register}
-            error={errors.contact?.message}
-          />
-          <Button type="submit">Cadastrar</Button>
+          <Divisor>
+            <Input
+              name="name"
+              label="Nome"
+              placeholder="Digite aqui seu nome"
+              register={register}
+              error={errors.name?.message}
+            />
+            <Input
+              name="email"
+              label="Email"
+              placeholder="Digite aqui seu email"
+              register={register}
+              error={errors.email?.message}
+            />
+            <Input
+              name="password"
+              label="Senha"
+              placeholder="Digite aqui sua senha"
+              register={register}
+              type="password"
+              error={errors.password?.message}
+            />
+            <Input
+              name="confirmPassword"
+              label="Confirmar Senha"
+              placeholder="Digite novamente sua senha"
+              register={register}
+              type="password"
+              error={errors.confirmPassword?.message}
+            />
+          </Divisor>
+          <Divisor>
+            <Select
+              name="course_module"
+              label="Selecionar Módulo"
+              register={register}
+              options={[
+                "Primeiro módulo (Introdução ao Frontend)",
+                "Segundo módulo (Frontend Avançado)",
+                "Terceiro módulo (Introdução ao Backend)",
+                "Quarto módulo (Backend Avançado)",
+              ]}
+              error={errors.course_module?.message}
+            />
+            <Input
+              name="bio"
+              label="Bio"
+              placeholder="Um pouco sobre você"
+              register={register}
+              error={errors.bio?.message}
+            />
+            <Input
+              name="contact"
+              label="Contato"
+              placeholder="Digite aqui seu contato"
+              register={register}
+              error={errors.contact?.message}
+            />
+            <ButtonDiv>
+              <Button type="submit">Cadastrar</Button>
+            </ButtonDiv>
+          </Divisor>
         </form>
       </Content>
     </Container>

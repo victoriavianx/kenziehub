@@ -1,8 +1,19 @@
 import styled from "styled-components";
+import { keyframes } from "styled-components";
+
+const appearFromLeft = keyframes`
+from{
+    opacity: 0;
+    transform: translateX(-50px)
+}
+
+to {
+    opacity: 1;
+    transform: translateX(0px)
+}`;
 
 export const Container = styled.div`
   width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -10,7 +21,8 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-  margin: auto;
+  animation: ${appearFromLeft} 1s;
+  margin: 0 auto 3rem auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,7 +39,7 @@ export const Content = styled.div`
   span {
     margin-top: 1rem;
     font-size: 10px;
-    color: var(--red);
+    color: var(--white);
   }
 
   form {
@@ -35,7 +47,35 @@ export const Content = styled.div`
     margin: 1rem 0 2rem 0;
   }
 
-  @media (min-width: 1025px) {
-    width: 400px;
+  @media (min-width: 768px) {
+    margin-top: 3rem;
+    max-width: 625px;
+
+    form {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: row;
+      max-width: 540px;
+    }
+  }
+`;
+
+export const Divisor = styled.div`
+  @media (min-width: 768px) {
+    margin: 0.5rem;
+  }
+
+  @media (min-width: 820px) {
+    margin: 1rem;
+  }
+`;
+
+export const ButtonDiv = styled.div`
+  margin: auto;
+  width: 100%;
+  max-width: 260px;
+
+  @media (min-width: 768px) {
+    max-width: 240px;
   }
 `;
