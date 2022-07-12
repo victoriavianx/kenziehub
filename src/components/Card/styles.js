@@ -10,6 +10,7 @@ export const CardLi = styled.li`
   width: 70vw;
   margin: 1rem 0 1rem 0;
   max-width: 708px;
+  transition: 0.5s;
 
   h3 {
     font-size: 0.7rem;

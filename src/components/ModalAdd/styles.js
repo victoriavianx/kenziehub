@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ModalContainer = styled.section`
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -14,7 +14,7 @@ export const ModalContainer = styled.section`
 
 export const Container = styled.div`
   width: 80%;
-  height: 40%;
+  height: 50%;
   background-color: var(--darkgray);
   border-radius: 4px;
   max-width: 330px;
@@ -22,6 +22,10 @@ export const Container = styled.div`
   form {
     padding: 2rem;
     max-width: 330px;
+  }
+
+  @media (min-width: 390px) {
+    height: 45%;
   }
 `;
 

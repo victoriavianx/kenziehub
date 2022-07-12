@@ -14,6 +14,7 @@
   font-size: 14px;
   font-weight: 400;
   margin-top: 1rem;
+  transition: 0.5s;
 }
 
 #buttonSignup:hover {

@@ -1,19 +1,31 @@
 import styled from "styled-components";
+import { keyframes } from "styled-components";
+
+const appearFromLeft = keyframes`
+from{
+    opacity: 0;
+    transform: translateX(-50px)
+}
+
+to {
+    opacity: 1;
+    transform: translateX(0px)
+}`;
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 100vh;
   align-items: center;
 `;
 
 export const Info = styled.div`
+  animation: ${appearFromLeft} 1s;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   width: 100vw;
-  height: 118px;
+  height: 80px;
   border-top: 1px solid var(--gray);
   border-bottom: 1px solid var(--gray);
 
@@ -27,13 +39,19 @@ export const Info = styled.div`
     font-weight: 400;
     color: var(--lightgray);
   }
+
+  @media (min-width: 768px) {
+    height: 118px;
+  }
 `;
 
 export const TechTitle = styled.div`
+  animation: ${appearFromLeft} 1s;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   width: 100vw;
+  height: 70px;
 
   h3 {
     font-size: 16px;
@@ -53,6 +71,7 @@ export const TechTitle = styled.div`
 `;
 
 export const Content = styled.div`
+  animation: ${appearFromLeft} 1s;
   width: 80vw;
   height: 60vh;
   display: flex;
